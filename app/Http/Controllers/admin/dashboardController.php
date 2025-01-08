@@ -10,6 +10,6 @@ class dashboardController extends Controller
 {
     public function index()
     {
-        return view('theme.default.pages.dashboard.home');
+        return view('theme.default.pages.dashboard.index');
     }
 }
