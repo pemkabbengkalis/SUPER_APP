@@ -10,10 +10,11 @@ class dashboardController extends Controller
 {
     public function index()
     {
-        return view('theme.default.pages.dashboard.layanan.index');
+        return view('theme.default.pages.dashboard.home');
     }
 
     public function layanan()
     {
+        return view('theme.default.pages.dashboard.layanan.index');
     }
 }
