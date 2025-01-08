@@ -6,7 +6,7 @@
                 <div class="btn btn-primary"><i data-feather="home"> </i>Dashboard </div>
             </li>
             <li>
-                <div class="btn btn-light"><i data-feather="folder"></i>Informasi Layanan </div>
+                <div class="btn btn-light"><i data-feather="folder"></i><a href="{{ route('layanan') }}">Informasi Layanan</a> </div>
             </li>
             <li>
                 <div class="btn btn-light"><i data-feather="clock"></i>Profile </div>
