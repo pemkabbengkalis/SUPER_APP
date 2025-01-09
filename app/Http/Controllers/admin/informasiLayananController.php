@@ -12,4 +12,10 @@ class informasiLayananController extends Controller
     {
         return view('theme.default.pages.dashboard.layanan.index');
     }
+
+
+    public function detail()
+    {
+        return view('theme.default.pages.dashboard.layanan.detail');
+    }
 }

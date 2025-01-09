@@ -14,8 +14,8 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function () {
     Route::get('dashboard', [dashboardController::class, 'index'])->name('dashboard');
 
-    Route::get('layanan', [informasiLayananController::class, 'index'])->name('layanan');  
-    Route::get('layanan/{id_layanan}', [dashboardController::class, 'layanan'])->name('dashboard.detail_layanan');
+    Route::get('layanan', [informasiLayananController::class, 'index'])->name('layanan');
+    Route::get('layanan-detail', [informasiLayananController::class, 'detail'])->name('dashboard.detail_layanan');
 
 
     Route::get('profile', [profileController::class, 'index']);

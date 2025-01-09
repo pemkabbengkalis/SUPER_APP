@@ -28,7 +28,7 @@
                         <!-- Tampilkan gambar jika ada -->
                         <img src="https://via.placeholder.com/50" alt="Nama Layanan" style="width: 50px; height: 50px;">
                     </div>
-                    <h6>Nama Layanan</h6>
+                    <a href="{{route('dashboard.detail_layanan')}}"><h6> Nama Layanan</h6> </a>
                 </li>
                 <li>
                     <div class="quick-box text-center">
