@@ -21,23 +21,8 @@
             </div>
         </div>
         <div class="card-body file-manager">
-            <h5 class="mb-2">Daftar Layanan </h5>
-            <ul class="quick-file d-flex flex-row">
-                <li>
-                    <div class="quick-box text-center">
-                        <!-- Tampilkan gambar jika ada -->
-                        <img src="https://via.placeholder.com/50" alt="Nama Layanan" style="width: 50px; height: 50px;">
-                    </div>
-                    <h6>Nama Layanan</h6>
-                </li>
-                <li>
-                    <div class="quick-box text-center">
-                        <!-- Tampilkan gambar jika ada -->
-                        <img src="https://via.placeholder.com/50" alt="Nama Layanan" style="width: 50px; height: 50px;">
-                    </div>
-                    <h6>Nama Layanan</h6>
-                </li>
-            </ul>
+            <h5 class="mb-2">Detail Pelayanan</h5>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ipsa, enim unde debitis consequuntur deserunt ut, porro cum quisquam blanditiis et numquam praesentium soluta? Autem est recusandae eveniet hic, reiciendis beatae debitis repellendus eum deserunt cumque optio commodi alias ducimus delectus, possimus voluptate cupiditate ratione provident quibusdam. Voluptatibus, nisi esse amet quaerat dolor eius. Officiis vel molestias nemo ullam numquam quos assumenda ipsa fuga explicabo praesentium vero maiores excepturi labore nulla reprehenderit, minima modi ab nostrum! Laudantium doloribus illum, molestiae incidunt dolorum expedita eveniet itaque debitis alias cumque, et sunt fugiat. Iste ut atque perspiciatis impedit officiis! Nihil fuga ipsam fugiat nesciunt! Debitis doloribus tenetur earum odio ad deserunt cupiditate impedit omnis dolor perferendis quaerat in, mollitia, natus aliquam, voluptatibus facere laboriosam molestias error fugiat similique ex porro quam! Maiores corrupti voluptate nobis aliquid debitis similique ipsam nisi quo, quis rerum quidem libero voluptatum numquam alias illo, sequi exercitationem cum repellat minus quos. Accusamus nostrum magnam iure, pariatur ad dolore error sequi ex fuga rerum exercitationem doloremque reprehenderit delectus odit deserunt ipsam molestias adipisci asperiores distinctio numquam modi dignissimos! Necessitatibus porro reiciendis totam perspiciatis dolorum natus molestiae enim vitae deleniti quidem. Distinctio quae dolorum voluptatem eligendi ipsum aliquam architecto id.
         </div>
     </div>
 @endsection

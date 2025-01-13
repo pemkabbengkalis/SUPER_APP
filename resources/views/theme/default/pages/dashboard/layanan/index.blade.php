@@ -23,20 +23,15 @@
         <div class="card-body file-manager">
             <h5 class="mb-2">Daftar Layanan </h5>
             <ul class="quick-file d-flex flex-row">
+                @for ($i = 1; $i < 11; $i++)
                 <li>
                     <div class="quick-box text-center">
                         <!-- Tampilkan gambar jika ada -->
                         <img src="https://via.placeholder.com/50" alt="Nama Layanan" style="width: 50px; height: 50px;">
                     </div>
-                    <a href="{{route('dashboard.detail_layanan')}}"><h6> Nama Layanan</h6> </a>
+                    <a href="{{route('dashboard.detail_layanan')}}"><h6> Nama Layanan {{$i}}</h6> </a>
                 </li>
-                <li>
-                    <div class="quick-box text-center">
-                        <!-- Tampilkan gambar jika ada -->
-                        <img src="https://via.placeholder.com/50" alt="Nama Layanan" style="width: 50px; height: 50px;">
-                    </div>
-                    <h6>Nama Layanan</h6>
-                </li>
+                @endfor
             </ul>
         </div>
     </div>
