@@ -22,21 +22,23 @@
         </div>
         <div class="card-body file-manager">
             <h5 class="mb-2">Layanan CCTV Bengkalis</h5>
-            <ul class="quick-file d-flex flex-row">
+            <ul class="quick-file d-flex flex-wrap justify-content-center">
                 @foreach($data as $item)
-                <li>
-                <iframe 
-                    width="525" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/{{ $item['embed'] }}" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-                    <a href="{{route('dashboard.detail_layanan')}}"><h6>{!! $item['description'] !!}</h6> </a>
+                <li class="file-item">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/{{ $item['embed'] }}" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <a href="{{route('dashboard.detail_layanan')}}">
+                        <h6 class="video-description">{!! $item['description'] !!}</h6>
+                    </a></br>
                 </li>
                 @endforeach
             </ul>
-        </div>
+        </div>        
     </div>
 @endsection
