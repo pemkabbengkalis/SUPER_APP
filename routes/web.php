@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\informasiLayananController;
 use App\Http\Controllers\admin\profileController;
 use App\Http\Controllers\auth\loginController;
 use App\Http\Controllers\auth\logoutController;
+use App\Http\Controllers\auth\registerController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,8 +18,8 @@ Route::prefix('auth')->group(function () {
     Route::post('login', [loginController::class, 'login']);
     Route::get('logout', [logoutController::class, 'logout'])->name('logout');
 
-    Route::get('register', [loginController::class, 'register'])->name('register');
-    Route::post('register', [loginController::class, 'store']);
+    Route::get('register', [registerController::class, 'index'])->name('register');
+    Route::post('register', [registerController::class, 'store']);
 });
 
 // DAHSBOARD

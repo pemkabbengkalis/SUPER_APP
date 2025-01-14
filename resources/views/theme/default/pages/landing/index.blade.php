@@ -24,7 +24,7 @@
                                 <ul class="navbar-nav navbar_nav_modify" id="scroll-spy">
                                 </ul>
                             </div>
-                            <div class="buy-btn"><a class="nav-link js-scroll" href="#">Masuk</a>
+                            <div class="buy-btn"><a class="nav-link js-scroll" href="{{ route('login') }}">Masuk</a>
                             </div>
                         </nav>
                     </header>
