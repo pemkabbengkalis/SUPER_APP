@@ -22,7 +22,27 @@
         </div>
         <div class="card-body file-manager">
             <h5 class="mb-2">Detail Pelayanan</h5>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ipsa, enim unde debitis consequuntur deserunt ut, porro cum quisquam blanditiis et numquam praesentium soluta? Autem est recusandae eveniet hic, reiciendis beatae debitis repellendus eum deserunt cumque optio commodi alias ducimus delectus, possimus voluptate cupiditate ratione provident quibusdam. Voluptatibus, nisi esse amet quaerat dolor eius. Officiis vel molestias nemo ullam numquam quos assumenda ipsa fuga explicabo praesentium vero maiores excepturi labore nulla reprehenderit, minima modi ab nostrum! Laudantium doloribus illum, molestiae incidunt dolorum expedita eveniet itaque debitis alias cumque, et sunt fugiat. Iste ut atque perspiciatis impedit officiis! Nihil fuga ipsam fugiat nesciunt! Debitis doloribus tenetur earum odio ad deserunt cupiditate impedit omnis dolor perferendis quaerat in, mollitia, natus aliquam, voluptatibus facere laboriosam molestias error fugiat similique ex porro quam! Maiores corrupti voluptate nobis aliquid debitis similique ipsam nisi quo, quis rerum quidem libero voluptatum numquam alias illo, sequi exercitationem cum repellat minus quos. Accusamus nostrum magnam iure, pariatur ad dolore error sequi ex fuga rerum exercitationem doloremque reprehenderit delectus odit deserunt ipsam molestias adipisci asperiores distinctio numquam modi dignissimos! Necessitatibus porro reiciendis totam perspiciatis dolorum natus molestiae enim vitae deleniti quidem. Distinctio quae dolorum voluptatem eligendi ipsum aliquam architecto id.
+                <a href="http://simpel-dukcapil.bengkaliskab.go.id/" target="_blank" class="btn btn-primary">Kunjungi SIMPEL Dukcapil</a>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pdfModal">Layanan 112</button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="pdfModalLabel">Modul Panggilan 112</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Iframe untuk menampilkan konten -->
+                        <iframe src="https://online.fliphtml5.com/herht/iqhv/" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
