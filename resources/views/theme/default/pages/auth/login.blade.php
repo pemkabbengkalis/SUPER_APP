@@ -10,7 +10,7 @@
                                 class="img-fluid for-light" src="{{ asset('theme') }}/assets/images/logo/logo_dark.png"
                                 alt="looginpage"></a></div>
                     <div class="login-main">
-                        <form class="theme-form" action="{{ route('auth.login.validasi') }}" method="POST">
+                        <form class="theme-form" action="#" method="POST">
                             @csrf
                             <h4>Hallo,</h4>
                             <p>Silahkan Masukkan Username dan Password Anda</p>
@@ -39,7 +39,7 @@
                                 </div>
                             </div>
                             <p class="mt-4 mb-0 text-center">Belum punya akun?<a class="ms-2"
-                                    href="{{ route('auth.register') }}">Daftar</a></p>
+                                    href="{{ route('register') }}">Daftar</a></p>
                         </form>
                     </div>
                 </div>

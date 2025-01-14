@@ -4,10 +4,20 @@ use App\Http\Controllers\admin\dashboardController;
 use App\Http\Controllers\admin\faqController;
 use App\Http\Controllers\admin\informasiLayananController;
 use App\Http\Controllers\admin\profileController;
+use App\Http\Controllers\auth\{loginController,logoutController,registerController};
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('theme.default.pages.landing.index');
+});
+
+Route::prefix('auth')->group(function () {
+    Route::get('login', [loginController::class, 'index'])->name('login');
+    Route::post('login', [loginController::class, 'login']);
+    Route::get('logout', [logoutController::class, 'logout'])->name('logout');
+
+    Route::get('register', [registerController::class, 'index'])->name('register');
+    Route::post('register', [registerController::class, 'store']);
 });
 
 // DAHSBOARD
