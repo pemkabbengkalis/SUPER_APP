@@ -7,7 +7,7 @@
                         <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
                             placeholder="Search Riho {{ asset('theme') }}" name="q" title=""
                             autofocus="autofocus" />
-                        <div class="spinner-border Typeahead-spinner" role="status"><span
+                        <div class="spinner-border Typeahead-spinner" role="status"><span>
                                 class="sr-only">Loading{{ asset('theme') }}. </span></div><i class="close-search"
                             data-feather="x"></i>
                     </div>
