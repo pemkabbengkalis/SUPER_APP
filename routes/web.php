@@ -4,9 +4,7 @@ use App\Http\Controllers\admin\dashboardController;
 use App\Http\Controllers\admin\faqController;
 use App\Http\Controllers\admin\informasiLayananController;
 use App\Http\Controllers\admin\profileController;
-use App\Http\Controllers\auth\loginController;
-use App\Http\Controllers\auth\logoutController;
-use App\Http\Controllers\auth\registerController;
+use App\Http\Controllers\auth\{loginController,logoutController,registerController};
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
