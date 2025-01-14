@@ -13,14 +13,14 @@
                         <form class="theme-form" action="#" method="POST">
                             @csrf
                             <h4>Hallo,</h4>
-                            <p>Silahkan Masukkan Username dan Password Anda</p>
+                            <p>Silahkan Masukkan NIK dan Password Anda</p>
                             <div class="form-group">
-                                <label class="col-form-label">Email</label>
-                                <input class="form-control" type="email" required="" name="email"
-                                    placeholder="Masukkan Email">
+                                <label class="col-form-label">Nomor Identitas Kependudukan (NIK)</label>
+                                <input class="form-control" type="number" required="" name="nik"
+                                    placeholder="Masukkan NIK">
                             </div>
                             <div class="form-group">
-                                <label class="col-form-label">Password</label>
+                                <label class="col-form-label">Kata Sandi</label>
                                 <div class="form-input position-relative">
                                     <input class="form-control" type="password" name="password" required=""
                                         placeholder="*********">
@@ -30,12 +30,8 @@
                                 </div>
                             </div>
                             <div class="form-group mb-0">
-                                <div class="checkbox p-0">
-                                    <input id="checkbox1" type="checkbox">
-                                    <label class="text-muted" for="checkbox1">Ingat saya</label>
-                                </div><a class="link" href="#">Lupa Password?</a>
                                 <div class="text-end mt-3">
-                                    <button class="btn btn-primary btn-block w-100" type="submit">Sign in</button>
+                                    <button class="btn btn-primary btn-block w-100" type="submit">Masuk</button>
                                 </div>
                             </div>
                             <p class="mt-4 mb-0 text-center">Belum punya akun?<a class="ms-2"
