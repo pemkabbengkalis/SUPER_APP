@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="card-body file-manager">
-            <h5 class="mb-2">Daftar Layanan CCTV Bengkalis</h5>
+            <h5 class="mb-2">Layanan CCTV Bengkalis</h5>
             <ul class="quick-file d-flex flex-row">
                 @foreach($data as $item)
                 <li>
