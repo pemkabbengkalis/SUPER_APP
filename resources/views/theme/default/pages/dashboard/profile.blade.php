@@ -3,10 +3,14 @@
     <div class="card-body">
         <ul>
             <li>
-                <div class="btn btn-primary"><i data-feather="home"> </i>Dashboard </div>
+                <a href="{{ route('dashboard') }}">
+                    <div class="btn @if (Request::segment(2) == 'dashboard') btn-primary @else btn-light @endif"><i data-feather="home"> </i>Dashboard </div>
+                </a>
             </li>
             <li>
-                <div class="btn btn-light"><i data-feather="folder"></i><a href="{{ route('layanan') }}">Informasi Layanan</a> </div>
+                <a href="{{ route('layanan') }}">
+                    <div class="btn @if (Request::segment(2) == 'layanan') btn-primary @else btn-light @endif"><i data-feather="folder"></i>Informasi Layanan</div>
+                </a>
             </li>
             <li>
                 <div class="btn btn-light"><i data-feather="clock"></i>Profile </div>
