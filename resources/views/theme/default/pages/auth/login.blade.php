@@ -14,6 +14,11 @@
                             @csrf
                             <h4>Hallo,</h4>
                             <p>Silahkan Masukkan NIK dan Password Anda</p>
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
                             <div class="form-group">
                                 <label class="col-form-label">Nomor Identitas Kependudukan (NIK)</label>
                                 <input class="form-control" type="number" required="" name="nik"
