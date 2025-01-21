@@ -21,9 +21,17 @@
             </div>
         </div>
         <div class="card-body file-manager">
-            <h5 class="mb-2">{{$data->nama}}</h5>
-                <img src="{{$data->icon}}" alt="Icon" style="width: 100px; height: auto;">
-                {!!$data->keterangan!!}
-        </div>        
+            <h5>Daftar Layanan</h5></br>
+            <ul class="quick-file d-flex flex-row">
+                @foreach (json_decode(json_encode($data)) as $row)
+                <li>
+                    <div class="quick-box text-center">
+                        <img src="{{$row->icon}}" alt="Nama Layanan" style="width: 100px; height: 100px;">
+                    </div>
+                    <a href="{{isset($row->path) ? route('detail',$row->path) : $row->link}}"><h6> {{$row->nama}}</h6> </a>
+                </li>
+                @endforeach
+            </ul>
+        </div>
     </div>
 @endsection

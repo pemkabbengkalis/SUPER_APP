@@ -114,7 +114,7 @@
         5.9 Box-layout CSS 
 
  */
-:root {
+ :root {
   --theme-deafult: #006666;
   --theme-secondary: #FE6A49;
   --light-background: rgba(242, 243, 247, 0.7);
@@ -249,76 +249,6 @@ body.dark-only.box-layout {
   --view-border-marker: #2c2c45d4;
   --bs-heading-color: rgb(255, 255, 255);
   --bs-card-color: rgba(255, 255, 255 , 0.7);
-}
-
-/* General Styling */
-.file-manager {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.quick-file {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Jarak antar elemen */
-  justify-content: center;
-}
-
-.file-item {
-  flex: 1 1 calc(33.333% - 20px); /* Tiga kolom */
-  max-width: calc(33.333% - 20px);
-  box-sizing: border-box;
-  text-align: center;
-}
-
-/* Responsif: Dua kolom di tablet */
-@media (max-width: 768px) {
-  .file-item {
-      flex: 1 1 calc(50% - 20px);
-      max-width: calc(50% - 20px);
-  }
-}
-
-/* Responsif: Satu kolom di ponsel */
-@media (max-width: 480px) {
-  .file-item {
-      flex: 1 1 100%;
-      max-width: 100%;
-  }
-}
-
-/* Video Wrapper for Responsiveness */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
-  overflow: hidden;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Description Styling */
-.video-description {
-  margin-top: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-}
-
-.video-description:hover {
-  color: #007bff; /* Warna saat hover */
 }
 
 /**=====================

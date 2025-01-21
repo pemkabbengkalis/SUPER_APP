@@ -32,5 +32,35 @@ class informasiLayananController extends Controller
 
         return view('theme.default.pages.dashboard.layanan.cctv', compact('data'));
     }
+    public function api_url(){
+        return config('app.api_url');
+    }
+    public function layananpublik()
+    {
+        $response = Http::get($this->api_url().'/api/layanan');
+    
+        if ($response->successful()) {
+            $data = $response->json();
+            return view('theme.default.pages.dashboard.layanan.layanan-publik', ['data' => $data['data']['list_layanan']]);
+        }
+        
+        return abort(500, 'Unable to fetch data from API.');
+    } 
+
+    public function detail_layanan($slug)
+    {
+            $response = Http::get($this->api_url().'/api/layanan/'.$slug);
+        
+            if ($response->successful()) {
+                $data = $response->json();
+                if(isset($data['data']['list_layanan'])){
+                return view('theme.default.pages.dashboard.layanan.layanan-publik', ['data' => $data['data']['list_layanan']]);  
+                }
+                
+                return view('theme.default.pages.dashboard.layanan.detail', ['data' => json_decode(json_encode($data['data']))]);
+            }
+            
+            return abort(500, 'Unable to fetch data from API.');
+    }
 
 }

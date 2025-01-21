@@ -8,7 +8,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('layanan') }}">
+                <a href="{{ route('layananpublik') }}">
                     <div class="btn @if (Request::segment(2) == 'layanan') btn-primary @else btn-light @endif"><i data-feather="folder"></i>Informasi Layanan</div>
                 </a>
             </li>
