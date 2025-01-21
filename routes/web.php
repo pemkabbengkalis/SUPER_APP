@@ -5,6 +5,7 @@ use App\Http\Controllers\admin\faqController;
 use App\Http\Controllers\admin\informasiLayananController;
 use App\Http\Controllers\admin\profileController;
 use App\Http\Controllers\auth\{loginController,logoutController,registerController};
+use App\Http\Middleware\AuthSessionMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -32,4 +33,4 @@ Route::prefix('admin')->group(function () {
 
     Route::get('profile', [profileController::class, 'index']);
     Route::get('faq', [faqController::class, 'index']);
-});
+})->middleware(AuthSessionMiddleware::class);
