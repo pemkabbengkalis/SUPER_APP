@@ -33,4 +33,4 @@ Route::prefix('admin')->group(function () {
 
     Route::get('profile', [profileController::class, 'index']);
     Route::get('faq', [faqController::class, 'index']);
-})->middleware(AuthSessionMiddleware::class);
+})->middleware('auth');

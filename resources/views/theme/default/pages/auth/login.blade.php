@@ -14,21 +14,30 @@
                             @csrf
                             <h4>Hallo,</h4>
                             <p>Silahkan Masukkan NIK dan Password Anda</p>
+
                             @if (session('success'))
                                 <div class="alert alert-success">
                                     {{ session('success') }}
                                 </div>
                             @endif
+
+                            <!-- Tampilkan error jika ada -->
+                            @error('login_error')
+                                <div class="alert alert-danger">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
                             <div class="form-group">
                                 <label class="col-form-label">Nomor Identitas Kependudukan (NIK)</label>
                                 <input class="form-control" type="number" required="" name="nik"
-                                    placeholder="Masukkan NIK">
+                                    placeholder="Masukkan NIK" value="{{ old('nik') }}">
                             </div>
                             <div class="form-group">
                                 <label class="col-form-label">Kata Sandi</label>
                                 <div class="form-input position-relative">
                                     <input class="form-control" type="password" name="password" required=""
-                                        placeholder="*********">
+                                        placeholder="*********" value="{{ old('password') }}">
                                     <div class="show-hide">
                                         <span class="show"> </span>
                                     </div>
