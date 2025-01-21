@@ -35,12 +35,24 @@ class registerController extends Controller
 
         if ($response->successful()) {
             return redirect()->route('login')->with('success', 'Registrasi berhasil! Silakan login.');
-        } else {
+        }
+
+        if ($response->failed()) {
+            $errors = $response->json('errors', []);
+
+            if (!empty($errors)) {
+                return redirect()->back()->withErrors($errors)->withInput();
+            }
+
             $errorMessage = $response->json('message', 'Registrasi gagal. Silakan coba lagi.');
             return redirect()
                 ->back()
                 ->withErrors(['api_error' => $errorMessage])
                 ->withInput();
         }
+        return redirect()
+            ->back()
+            ->withErrors(['api_error' => 'Terjadi kesalahan tak terduga. Silakan coba lagi.'])
+            ->withInput();
     }
 }

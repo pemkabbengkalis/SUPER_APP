@@ -15,43 +15,65 @@
                             <h4>Pendaftaran</h4>
                             <p>Silahkan isi form dibawah untuk mendaftar ke aplikasi {{ env('APP_NAME') }}</p>
 
+                            <!-- NIK Field -->
                             <div class="form-group">
                                 <label class="col-form-label">Nomor Identitas Kependudukan (NIK)</label>
-                                <input class="form-control" type="number" name="nik" value="{{ old('nik') }}"
-                                    required>
+                                <input class="form-control @error('nik') is-invalid @enderror" type="number" name="nik"
+                                    value="{{ old('nik') }}" placeholder="Masukkan NIK">
                                 @error('nik')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
                                 @enderror
                             </div>
 
+                            <!-- Nama Lengkap Field -->
                             <div class="form-group">
                                 <label class="col-form-label">Nama Lengkap</label>
-                                <input class="form-control" type="text" name="name" value="{{ old('name') }}"
-                                    required>
+                                <input class="form-control @error('name') is-invalid @enderror" type="text"
+                                    name="name" value="{{ old('name') }}" placeholder="Jhon Doe">
                                 @error('name')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
                                 @enderror
                             </div>
 
+                            <!-- Password Field -->
                             <div class="form-group">
                                 <label class="col-form-label">Kata Sandi</label>
                                 <div class="form-input position-relative">
-                                    <input class="form-control" type="password" name="password" required>
-                                    <div class="show-hide"><span class="show"></span></div>
+                                    <input class="form-control @error('password') is-invalid @enderror" type="password"
+                                        name="password" placeholder="*********">
+                                    <div class="show-hide">
+                                        <span class="show"></span>
+                                    </div>
                                 </div>
                                 @error('password')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
                                 @enderror
                             </div>
 
+                            <!-- Konfirmasi Kata Sandi Field -->
                             <div class="form-group">
                                 <label class="col-form-label">Konfirmasi Kata Sandi</label>
                                 <div class="form-input position-relative">
-                                    <input class="form-control" type="password" name="password_confirmation" required>
-                                    <div class="show-hide"><span class="show"></span></div>
+                                    <input class="form-control @error('password_confirmation') is-invalid @enderror"
+                                        type="password" name="password_confirmation" placeholder="*********">
+                                    <div class="show-hide">
+                                        <span class="show"></span>
+                                    </div>
                                 </div>
+                                @error('password_confirmation')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
 
+                            <!-- Submit Button -->
                             <div class="form-group mb-0">
                                 <button class="btn btn-primary btn-block w-100" type="submit">Buat Akun</button>
                             </div>
