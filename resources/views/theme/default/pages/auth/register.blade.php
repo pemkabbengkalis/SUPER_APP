@@ -5,40 +5,60 @@
         <div class="col-12 p-0">
             <div class="login-card login-dark">
                 <div>
-                  <div><a class="logo" href="index.html"> <img class="img-fluid for-dark" src="{{ asset('theme') }}/assets/images/logo/logo.png" alt="looginpage"><img class="img-fluid for-light" src="{{ asset('theme') }}/assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
-                  <div class="login-main"> 
-                    <form class="theme-form">
-                      <h4>Pendaftaran</h4>
-                      <p>Silahkan isi form dibawah untuk mendaftar ke aplikasi {{ env('APP_NAME') }}</p>
-                      <div class="form-group">
-                        <label class="col-form-label">Nomor Identitas Kependudukan (NIK)</label>
-                        <input class="form-control" type="number" required="">
-                      </div>
-                      <div class="form-group">
-                        <label class="col-form-label">Nama Lengkap</label>
-                        <input class="form-control" type="text" required="" placeholder="Jhon Doe">
-                      </div>
-                      <div class="form-group">
-                        <label class="col-form-label">Kata Sandi</label>
-                        <div class="form-input position-relative">
-                          <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
-                          <div class="show-hide"><span class="show"></span></div>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-form-label">Konfirmasi Kata Sandi</label>
-                        <div class="form-input position-relative">
-                          <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
-                          <div class="show-hide"><span class="show"></span></div>
-                        </div>
-                      </div>
-                      <div class="form-group mb-0">
-                        <button class="btn btn-primary btn-block w-100" type="submit">Buat Akun</button>
-                      </div>
-                    </form>
-                  </div>
+                    <div><a class="logo" href="index.html"> <img class="img-fluid for-dark"
+                                src="{{ asset('theme') }}/assets/images/logo/logo.png" alt="looginpage"><img
+                                class="img-fluid for-light" src="{{ asset('theme') }}/assets/images/logo/logo_dark.png"
+                                alt="looginpage"></a></div>
+                    <div class="login-main">
+                        <form class="theme-form" method="POST" action="{{ route('register') }}">
+                            @csrf
+                            <h4>Pendaftaran</h4>
+                            <p>Silahkan isi form dibawah untuk mendaftar ke aplikasi {{ env('APP_NAME') }}</p>
+
+                            <div class="form-group">
+                                <label class="col-form-label">Nomor Identitas Kependudukan (NIK)</label>
+                                <input class="form-control" type="number" name="nik" value="{{ old('nik') }}"
+                                    required>
+                                @error('nik')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-form-label">Nama Lengkap</label>
+                                <input class="form-control" type="text" name="name" value="{{ old('name') }}"
+                                    required>
+                                @error('name')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-form-label">Kata Sandi</label>
+                                <div class="form-input position-relative">
+                                    <input class="form-control" type="password" name="password" required>
+                                    <div class="show-hide"><span class="show"></span></div>
+                                </div>
+                                @error('password')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-form-label">Konfirmasi Kata Sandi</label>
+                                <div class="form-input position-relative">
+                                    <input class="form-control" type="password" name="password_confirmation" required>
+                                    <div class="show-hide"><span class="show"></span></div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-0">
+                                <button class="btn btn-primary btn-block w-100" type="submit">Buat Akun</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
 @endsection
