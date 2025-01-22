@@ -9,6 +9,6 @@ class profileController extends Controller
 {
     public function index()
     {
-        return view('theme.default.pages.dashboard.profile');
+        return view('theme.default.pages.dashboard.profile.index');
     }
 }
