@@ -363,7 +363,7 @@
                         </div>
                     </div>
                     <ul class="profile-dropdown onhover-show-div">
-                        <li><a href="{{ asset('theme') }}/template/user-profile.html"><i
+                        <li><a href="{{ route('pro') }}"><i
                                     data-feather="user"></i><span>My
                                     Profile</span></a></li>
                         <li><a href="{{ asset('theme') }}/template/letter-box.html"><i
