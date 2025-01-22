@@ -371,7 +371,7 @@
                         <li> <a href="{{ asset('theme') }}/template/edit-profile.html"> <i
                                     data-feather="settings"></i><span>Settings</span></a></li>
                         <li><a class="btn btn-pill btn-outline-primary btn-sm"
-                                href="{{ asset('theme') }}/template/login.html">Log
+                                href="{{ route('logout') }}">Log
                                 Out</a></li>
                     </ul>
                 </li>

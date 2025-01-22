@@ -54,12 +54,4 @@ class loginController extends Controller
                 ->withInput();
         }
     }
-
-    public function logout()
-    {
-        // Hapus semua session
-        Session::flush();
-
-        return redirect()->route('login')->with('success', 'Anda telah logout.');
-    }
 }
