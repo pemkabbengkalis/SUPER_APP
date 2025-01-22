@@ -31,6 +31,6 @@ Route::prefix('admin')->group(function () {
     Route::get('layanan/cctv', [informasiLayananController::class, 'cctv']);
     Route::get('layanan/{slug}', [informasiLayananController::class, 'detail_layanan'])->name('detail');
 
-    Route::get('profile', [profileController::class, 'index']);
-    Route::get('faq', [faqController::class, 'index']);
+    Route::get('profile', [profileController::class, 'index'])->name('profile');
+    Route::get('faq', [faqController::class, 'index'])->name('faq');
 })->middleware('auth');
