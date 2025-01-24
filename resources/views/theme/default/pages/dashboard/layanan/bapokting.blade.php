@@ -42,32 +42,38 @@
             </div>
 
         </div>
-        <div class="card-body file-manager">
+        <div class="card-body">
 
-            <table class="table table-bordered mb-2">
-                <tr>
-                    <th>Nama Barang</th>
-                    <th>Nama Harga</th>
-                    <th>Terakhir Update</th>
-                </tr>
-                @if ($detail->status != 'success')
-                    {{-- Jika Data Kecamatan Tidak Ditemukan --}}
-                    <tr>
-                        <td colspan="3" class="text-center">Data tidak ditemukan</td>
-                    </tr>
-                    @else
-                    {{-- Jika Data Kecamatan Ditemukan --}}
-                    @foreach ($detail->data->sektor as $item)
-                        @foreach ($item->barang as $subitem)
-                            <tr>
-                                <td>{{$item->nama_sektor ?? ''}} {{$subitem->nama_barang ??''}}</td>
-                                <td>Rp. {{ number_format($subitem->harga ?? 0, 0, ',', '.') }},-</td>
-                                <td>{{$subitem->tanggal}}</td>
-                            </tr>
+            <div class="table-responsive custom-scrollbar">
+                <table class="display" id="basic-1">
+                    <thead>
+                        <tr>
+                            <th>Nama Barang</th>
+                            <th>Nama Harga</th>
+                            <th>Terakhir Update</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @if ($detail->status != 'success')
+                        {{-- Jika Data Kecamatan Tidak Ditemukan --}}
+                        <tr>
+                            <td colspan="3" class="text-center">Data tidak ditemukan</td>
+                        </tr>
+                        @else
+                        {{-- Jika Data Kecamatan Ditemukan --}}
+                        @foreach ($detail->data->sektor as $item)
+                            @foreach ($item->barang as $subitem)
+                                <tr>
+                                    <td>{{$item->nama_sektor ?? ''}} {{$subitem->nama_barang ??''}}</td>
+                                    <td>Rp. {{ number_format($subitem->harga ?? 0, 0, ',', '.') }},-</td>
+                                    <td>{{$subitem->tanggal}}</td>
+                                </tr>
+                            @endforeach
                         @endforeach
-                    @endforeach
-                @endif
-            </table>
+                    @endif
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <!-- Pastikan untuk menyertakan jQuery -->
@@ -80,4 +86,12 @@
         });
     });
 </script>
+@push('css')
+    <link rel="stylesheet" type="text/css" href="{{ asset('theme') }}/assets/css/vendors/datatables.css">
+@endpush
+@push('js')
+    <script src="{{ asset('theme') }}/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('theme') }}/assets/js/datatable/datatables/datatable.custom.js"></script>
+
+@endpush
 @endsection
