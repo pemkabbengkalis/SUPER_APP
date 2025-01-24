@@ -22,8 +22,7 @@
         </div>
         <div class="card-body file-manager">
             <h5 class="mb-2">{{$data->nama}}</h5>
-                <img src="{{$data->icon}}" alt="Icon" style="width: 100px; height: auto;">
-                {!!$data->keterangan!!}
-        </div>        
+            {!!$data->keterangan!!}
+            <br>
     </div>
 @endsection
