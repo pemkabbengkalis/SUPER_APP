@@ -5,14 +5,16 @@
         <div class="col-12 p-0">
             <div class="login-card login-dark">
                 <div>
-                    <div><a class="logo text-start" href="index.html"><img class="img-fluid for-dark"
-                                src="{{ asset('theme') }}/assets/images/logo/logo.png" alt="looginpage"><img
-                                class="img-fluid for-light" src="{{ asset('theme') }}/assets/images/logo/logo_dark.png"
-                                alt="looginpage"></a></div>
+                    <div><a class="logo" href="index.html"><img class="img-fluid for-dark"
+                                src="{{ asset('theme') }}/assets/images/logo/logo-bengkalis.png" alt="looginpage"
+                                style="width: 80px !important"><img class="img-fluid for-light"
+                                src="{{ asset('theme') }}/assets/images/logo/logo-bengkalis.png" alt="looginpage"
+                                style="width: 80px !important"></a>
+                    </div>
                     <div class="login-main">
                         <form class="theme-form" action="#" method="POST">
                             @csrf
-                            <h4>Hallo,</h4>
+                            <h4>Hallo, warga Bengkalis!</h4>
                             <p>Silahkan Masukkan NIK dan Password Anda</p>
 
                             @if (session('success'))
