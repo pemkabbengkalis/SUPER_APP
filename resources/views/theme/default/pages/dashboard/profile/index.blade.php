@@ -6,7 +6,7 @@
     <div class="col-xl-4">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title mb-0">My Profile</h4>
+                <h4 class="card-title mb-0">Profil</h4>
                 <div class="card-options">
                     <a class="card-options-collapse" href="#" data-bs-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
                     <a class="card-options-remove" href="#" data-bs-toggle="card-remove"><i class="fe fe-x"></i></a>
@@ -19,7 +19,7 @@
                             <div class="media">
                                 <img class="img-70 rounded-circle" alt="" src="{{ asset('theme/assets/images/avtar/default_profile_image.webp') }}">
                               <div class="media-body">
-                                <h5 class="mb-1">{{ $name ?? 'Nama Pengguna' }}</h5>
+                                <h5 class="mb-1">{{ $userProfile->name ?? 'Tidak ada nama' }}</h5>
                                 <p>{{ $jenis_kelamin ?? 'Jenis Kelamin' }}</p>
                               </div>
                             </div>
