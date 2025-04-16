@@ -1,5 +1,5 @@
 @extends('theme.default.layouts.app')
-
+@section('subtitle', 'Beranda')
 @section('content')
     <!-- tap on top starts-->
     <div class="tap-top"><i data-feather="chevrons-up"></i></div>
@@ -15,7 +15,7 @@
                     <header>
                         <nav class="navbar navbar-b navbar-dark navbar-trans navbar-expand-xl fixed-top nav-padding"
                             id="sidebar-menu"><a class="navbar-brand p-0" href="#"><img class="img-fluid"
-                                    src="{{ asset('theme') }}/assets/images/landing/landing_logo.png" alt=""></a>
+                                    src="{{ asset('theme') }}/assets/images/bengkalis.png" alt="" style="width: 70px; height: 90px;"></a>
                             <button class="navbar-toggler navabr_btn-set custom_nav" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault"
                                 aria-expanded="false"
@@ -23,6 +23,7 @@
                             <div class="navbar-collapse justify-content-center collapse hidenav" id="navbarDefault">
                                 <ul class="navbar-nav navbar_nav_modify" id="scroll-spy">
                                 </ul>
+                                <h3>KLIK BERMASA</h3>
                             </div>
                             <div class="buy-btn"><a class="nav-link js-scroll" href="{{ route('login') }}">Masuk</a>
                             </div>
@@ -30,7 +31,7 @@
                     </header>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-sm-10">
+                    {{-- <div class="col-lg-8 col-sm-10">
                         <div class="best-selling"><img class="img-fluid"
                                 src="{{ asset('theme') }}/assets/images/landing/selling-product.png" alt="selling-product">
                             <div class="img-shadow"></div>
@@ -82,7 +83,7 @@
                         </div>
                         <div class="star-img-left"> <img class="img-fluid start-animate-rotate fa-spin"
                                 src="{{ asset('theme') }}/assets/images/landing/star.png" alt="star"></div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
