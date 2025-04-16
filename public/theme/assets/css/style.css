@@ -29923,7 +29923,10 @@ html:hover .cursor {
   overflow: hidden;
   background-size: cover;
   height: 1060px;
-  background-image: url(../images/landing/demo-bg.png);
+  background-image: url(../images/landing/landing-bengkalis-fill.webp);
+}
+.menyala {
+    font-size: 20px !important;
 }
 .landing-home .sub-title {
   font-size: calc(18px + 12 * (100vw - 300px) / 1620);
