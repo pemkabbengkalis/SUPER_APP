@@ -8,9 +8,9 @@
     <meta name="description" content="Deskripsi Aplikasi" />
     <meta name="keywords" content="keyword1, keyword2" />
     <meta name="author" content="Diskominfotik Kab. Bengkalis" />
-    <link rel="icon" href="{{ asset('theme') }}/assets/images/favicon.png" type="image/x-icon" />
-    <link rel="shortcut icon" href="{{ asset('theme') }}/assets/images/favicon.png" type="image/x-icon" />
-    <title>Title - Sub Title</title>
+    <link rel="icon" href="{{ asset('theme') }}/assets/images/bengkalis.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('theme') }}/assets/images/bengkalis.png" type="image/x-icon" />
+    <title>{{ config('app.name') }} - @yield('subtitle')</title>
     <!-- Google font-->
     @if (request()->is('admin*'))
         <!-- admin font -->
