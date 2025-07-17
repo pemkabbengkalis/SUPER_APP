@@ -24,7 +24,7 @@ class loginController extends Controller
         ]);
 
         // Kirim request ke API login
-        $response = Http::post('https://apiklik.pbedev.my.id/api/login', [
+        $response = Http::post(config('app.api_url').'/api/login', [
             'nik' => $request->nik,
             'password' => $request->password,
         ]);
