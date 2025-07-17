@@ -58,7 +58,7 @@
                 <li>
                     <div class="mode"><i class="moon" data-feather="moon"> </i></div>
                 </li>
-                <li class="onhover-dropdown notification-down">
+                <!--<li class="onhover-dropdown notification-down">
                     <div class="notification-box">
                         <svg>
                             <use href="{{ asset('theme') }}/assets/svg/icon-sprite.svg#notification-header"></use>
@@ -352,10 +352,10 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li>-->
                 <li class="profile-nav onhover-dropdown">
                     <div class="media profile-media"><img class="b-r-10"
-                            src="{{ asset('theme') }}/assets/images/dashboard/profile.png" alt="" />
+                            src="{{ asset('theme') }}/assets/images/dashboard/user/lk.png" height="40" width="40" />
                         <div class="media-body d-xxl-block d-none box-col-none">
                             <div class="d-flex align-items-center gap-2"> <span>Agus Salim </span><i
                                     class="middle fa fa-angle-down"> </i></div>

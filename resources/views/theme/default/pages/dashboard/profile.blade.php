@@ -13,11 +13,11 @@
                             data-feather="folder"></i>Informasi Layanan</div>
                 </a>
             </li>
-            <li>
+            <!--<li>
                 <a href="{{ route('profile') }}">
                     <div class="btn btn-light"><i data-feather="clock"></i>Profile </div>
                 </a>
-            </li>
+            </li>-->
             <li>
                 <a href="{{ route('faq') }}">
                     <div class="btn btn-light"><i data-feather="star"></i>FAQ </div>

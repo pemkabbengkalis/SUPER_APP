@@ -39,7 +39,7 @@
                     </li>
                     <li class="sidebar-list">
                         <i class="fa fa-thumb-tack"> </i>
-                        <a class="sidebar-link sidebar-title" href="#">
+                        <a class="sidebar-link sidebar-title" href="{{ route('logout') }}">
                             <i class="icofont icofont-power"></i>
                             <span>Keluar </span>
                         </a>
