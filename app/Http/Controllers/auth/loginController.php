@@ -28,7 +28,7 @@ class loginController extends Controller
             'nik' => $request->nik,
             'password' => $request->password,
         ]);
-
+        //tes
         if ($response->successful() && $response->json('status') === true) {
             // Ambil data user dan token dari respons API
             $data = $response->json('data');
