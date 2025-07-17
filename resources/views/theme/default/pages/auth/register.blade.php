@@ -12,8 +12,8 @@
                     <div class="login-main">
                         <form class="theme-form" method="POST" action="{{ route('register') }}">
                             @csrf
-                            <h4>Pendaftaran</h4>
-                            <p>Silahkan isi form dibawah untuk mendaftar ke aplikasi {{ env('APP_NAME') }}</p>
+                            <center><h4>Pendaftaran</h4></center>
+                            <center><p>Silahkan isi form dibawah untuk mendaftar ke aplikasi Klik Bermasa</p></center>
 
                             <!-- NIK Field -->
                             <div class="form-group">
@@ -31,7 +31,7 @@
                             <div class="form-group">
                                 <label class="col-form-label">Nama Lengkap</label>
                                 <input class="form-control @error('name') is-invalid @enderror" type="text"
-                                    name="name" value="{{ old('name') }}" placeholder="Jhon Doe">
+                                    name="name" value="{{ old('name') }}" placeholder="Nama Lengkap">
                                 @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}

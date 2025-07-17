@@ -14,8 +14,8 @@
                     <div class="login-main">
                         <form class="theme-form" action="#" method="POST">
                             @csrf
-                            <h4>Hallo, warga Bengkalis!</h4>
-                            <p>Silahkan Masukkan NIK dan Password Anda</p>
+                            <center><h4>Aplikasi Klik Bermasa</h4></center>
+                            <center><p>Silahkan Masukkan NIK dan Password Anda</p></center>
 
                             @if (session('success'))
                                 <div class="alert alert-success">
